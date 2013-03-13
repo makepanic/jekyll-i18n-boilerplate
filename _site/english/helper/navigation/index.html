@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        
+
+
+
+
+
+
+
+
+	
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Navigation - Jekyll Boilerplate - Easy static and multilingual websites</title>
+<meta name="description" content="english: Lorem ipsum">
+<meta name="keywords" content="english: jekyll, boilerplate, html5, static">
+<meta name="robots" content="index, follow" />
+<meta name="language" content="en">
+<meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/foundation.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+        <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        
+        
+
+        <!-- Add your site or application content here -->
+        <nav class="top-bar">
+          <ul class="title-area">
+            <!-- Title Area -->
+            <li class="name">
+              <h1><a href="/">Jekyll Boilerplate</a></h1>
+            </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+          </ul>
+          <ul class="right">
+            <li class="divider hide-for-small">
+                
+
+
+
+
+<dl class="sub-nav">
+	<dt>Language:</dt>
+
+
+	
+	
+	
+	
+
+	
+		
+
+		
+
+		
+		<dd >
+			<a href="/deutsch/helper/navigation/">Deutsch</a>
+		</dd>
+	
+
+
+
+	
+	
+	
+	
+
+	
+		
+			
+		
+
+		
+
+		
+		<dd class="active">
+			<a href="/english/helper/navigation/">English</a>
+		</dd>
+	
+
+
+</dl>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="row"></div>
+        <div class="row">
+            <div class="columns large-2">
+                
+
+
+
+
+
+
+<ul class="side-nav">
+	<li><h3>Navigation</h3></li>
+	<li class="divider"></li>
+
+
+	
+
+		
+		
+
+		
+
+		
+
+		<li ><a href="/english/debug/">Debug</a></li>
+
+	
+
+	
+
+		
+		
+
+		
+			
+		
+
+		
+
+		<li class="active"><a href="/english/helper/">Helper</a></li>
+
+	
+
+
+</ul>
+            </div>
+            <div class="columns large-10">
+                
+
+
+<h2>Helper</h2>
+
+<ul class="side-nav">
+  
+
+
+
+
+
+
+  <li><a href="/english/helper/lang-chooser/">Language chooser</a></li>
+  
+
+
+
+
+
+
+  <li><a href="/english/helper/navigation/">Navigation</a></li>
+  
+
+
+
+
+
+
+  <li><a href="/english/helper/url-builder/">Link builder</a></li>
+</ul>
+
+<h3><a name="navigation"></a>Navigation <small>_includes/navigation.html</small></h3>
+
+<h4>description:</h4>
+<p></p>
+
+<h4>usage:</h4>
+<div class="panel">
+	<pre><code>&#123;% include navigation.html %}</code></pre>
+</div>
+
+
+<h4>config:</h4>
+
+<span class="secondary label">_config.yml</span>
+<div class="panel">
+<pre><code>navigation:
+  - <span class="label">debug</span>
+  - <span class="alert label">info</span>
+  - <span class="success label">helper</span>
+locales:
+  foo:
+    val: foo
+    i18n:
+      [..]
+    meta:
+      [..]
+    routing:
+      base: /foobar/
+      routes:
+        debug:
+          key: <span class="label">debug</span>
+          title: debug.title
+          url: debug/
+        info:
+          key: <span class="alert label">info</span>
+          title: info.title
+          url: informations/
+        helper:
+          key: <span class="success label">helper</span>
+          title: helper.title
+          url: helper/
+</code></pre>
+</div>
+<h4>example:</h4>
+<div class="panel">
+	
+
+
+
+
+
+
+<ul class="side-nav">
+	<li><h3>Navigation</h3></li>
+	<li class="divider"></li>
+
+
+	
+
+		
+		
+
+		
+
+		
+
+		<li ><a href="/english/debug/">Debug</a></li>
+
+	
+
+	
+
+		
+		
+
+		
+			
+		
+
+		
+
+		<li class="active"><a href="/english/helper/">Helper</a></li>
+
+	
+
+
+</ul>
+</div>
+
+<hr/>
+<div class="row">
+	<div class="columns">
+		<a href="#top">&#8593; nach oben</a>
+	</div>
+</div>
+            </div>
+        </div>
+
+    </body>
+</html>

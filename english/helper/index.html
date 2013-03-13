@@ -1,0 +1,19 @@
+---
+layout: default
+locale: en
+key: helper
+---
+
+{% assign locale = site.locales[page.locale] %}
+{% assign i18n = locale.i18n %}
+
+<h2>Helper</h2>
+
+<ul class="side-nav">
+	{% assign target = 'lang-chooser' %}{% include url-builder.html %}
+	<li><a href="{{url_val}}">{{url_title}}</a></li>
+	{% assign target = 'navigation' %}{% include url-builder.html %}
+	<li><a href="{{url_val}}">{{url_title}}</a></li>
+	{% assign target = 'url-builder' %}{% include url-builder.html %}
+	<li><a href="{{url_val}}">{{url_title}}</a></li>
+</ul>

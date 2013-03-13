@@ -1,0 +1,75 @@
+---
+layout: default
+locale: en
+key: navigation
+super: helper
+---
+
+{% assign locale = site.locales[page.locale] %}
+{% assign i18n = locale.i18n %}
+
+<h2>Helper</h2>
+
+<ul class="side-nav">
+  {% assign target = 'lang-chooser' %}{% include url-builder.html %}
+  <li><a href="{{url_val}}">{{url_title}}</a></li>
+  {% assign target = 'navigation' %}{% include url-builder.html %}
+  <li><a href="{{url_val}}">{{url_title}}</a></li>
+  {% assign target = 'url-builder' %}{% include url-builder.html %}
+  <li><a href="{{url_val}}">{{url_title}}</a></li>
+</ul>
+
+<h3><a name="navigation"></a>Navigation <small>_includes/navigation.html</small></h3>
+
+<h4>{{i18n['helper.desc']}}:</h4>
+<p>{{i18n['helper.desc.text']}}</p>
+
+<h4>{{i18n['helper.usage']}}:</h4>
+<div class="panel">
+	<pre><code>&#123;% include navigation.html %}</code></pre>
+</div>
+
+
+<h4>{{i18n['helper.config']}}:</h4>
+
+<span class="secondary label">_config.yml</span>
+<div class="panel">
+<pre><code>navigation:
+  - <span class="label">debug</span>
+  - <span class="alert label">info</span>
+  - <span class="success label">helper</span>
+locales:
+  foo:
+    val: foo
+    i18n:
+      [..]
+    meta:
+      [..]
+    routing:
+      base: /foobar/
+      routes:
+        debug:
+          key: <span class="label">debug</span>
+          title: debug.title
+          url: debug/
+        info:
+          key: <span class="alert label">info</span>
+          title: info.title
+          url: informations/
+        helper:
+          key: <span class="success label">helper</span>
+          title: helper.title
+          url: helper/
+</code></pre>
+</div>
+<h4>{{i18n['helper.example']}}:</h4>
+<div class="panel">
+	{% include navigation.html %}
+</div>
+
+<hr/>
+<div class="row">
+	<div class="columns">
+		<a href="#top">&#8593; nach oben</a>
+	</div>
+</div>

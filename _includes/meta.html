@@ -1,0 +1,24 @@
+{% comment %}
+	All the meta data from your html head based on _config.yml
+{% endcomment %}
+
+{% assign locale = site.locales[page.locale] %}
+
+{% assign meta = locale.meta %}
+{% assign i18n = locale.i18n %}
+{% assign route = locale.routing.routes[page.key] %}
+
+{% if i18n[route.title] %}
+	{% capture title %}{{i18n[route.title]}} - {{meta.title}}{% endcapture %}
+{% else %}
+	{% capture title %}{{meta.title}}{% endcapture %}
+{% endif %}
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>{{title}}</title>
+<meta name="description" content="{{meta.description}}">
+<meta name="keywords" content="{{meta.keywords}}">
+<meta name="robots" content="index, follow" />
+<meta name="language" content="{{page.locale}}">
+<meta name="viewport" content="width=device-width">

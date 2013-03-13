@@ -1,0 +1,114 @@
+{% comment %}
+	internal debugging page that displays useful output
+{% endcomment %}
+
+{% assign locale = site.locales[page.locale] %}
+{% assign routing = locale.routing %}
+{% assign i18n = locale.i18n %}
+
+<div class="row">
+	<div class="columns large-12">
+		<h2>Jekyll debug <small>_includes/debug.html</small></h2>
+	</div>
+
+
+	<div class="columns large-12">
+		<div class="panel">
+			<pre><code>&#123;% assign locale = site.locales[page.locale] %}
+&#123;% assign routing = locale.routing %}</code></pre>
+		</div>
+		<h3>page</h3>
+		<table class="columns">
+			<thead>
+				<tr>
+					<th width="200">{{i18n['debug.command']}}</th>
+					<th>{{i18n['debug.result']}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>&#123;&#123;page.layout}}</td>
+					<td>{{page.layout}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;page.url}}</td>
+					<td>{{page.url}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;page.key}}</td>
+					<td>{{page.key}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;page.locale}}</td>
+					<td>{{page.locale}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>routing</h3>
+		<table class="columns">
+			<thead>
+				<tr>
+					<th width="200">{{i18n['debug.command']}}</th>
+					<th>{{i18n['debug.result']}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>&#123;&#123;routing}}</td>
+					<td>{{routing}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;routing.base}}</td>
+					<td>{{routing.base}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;routing.routes}}</td>
+					<td>{{routing.routes}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;routing.routes.info}}</td>
+					<td>{{routing.routes.info}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>locale</h3>
+		<table class="columns">
+			<thead>
+				<tr>
+					<th width="200">{{i18n['debug.command']}}</th>
+					<th>{{i18n['debug.result']}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>&#123;&#123;locale}}</td>
+					<td>{{locale}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;locale.meta}}</td>
+					<td>{{locale.meta}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;locale.meta.title}}</td>
+					<td>{{locale.meta.title}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;locale.nav}}</td>
+					<td>{{locale.nav}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;locale.i18n}}</td>
+					<td>{{locale.i18n}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;locale.i18n.home}}</td>
+					<td>{{locale.i18n.home}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;locale.i18n['home']}}</td>
+					<td>{{locale.i18n['home']}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

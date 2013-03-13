@@ -1,0 +1,113 @@
+navigation:
+  - debug
+  - helper
+locales:
+  de:
+    label: lang.de
+    val: de
+    i18n:
+      de: Deutsch
+      en: Englisch
+      lang: Sprache
+      home: Homepage
+      navigation: Navigation
+      headline.title: Jekyll Boilerplate
+      helper.usage: Aufruf
+      helper.desc: Beschreibung
+      helper.config: Einstellungen
+      helper.lang-chooser: 'Sprach-Wähler'
+      helper.url-builder: 'Link-Builder'
+      helper.navigation: 'Navigation'
+      helper.lang.desc.text: Erstellt eine Auswahl, mit der man die aktuelle Sprache festlegen kann
+      helper.url.desc.text: Nimmt einen <strong>key</strong> als Eingabe und erstellt daraus einen passende <strong>url_val</strong> (absolute Url), <strong>url_title</strong> (durch route festgelegter Titel)
+      helper.nav.desc.text: Erstellt eine Navigation, welche mit Einträgen, die vorher in der <strong>_config.yml</strong> festgelegt wurden, automatisch gefüllt wird.
+      helper.example: Beispiel
+      te.st: Test
+      helper.title: Helper
+      debug.title: Debug
+      debug.command: Befehl
+      debug.result: Ergebnis
+    meta:
+      title: 'Jekyll Boilerplate - Einfach statisch, mulitlinguale Seiten'
+      keywords: 'jekyll, boilerplate, html5, static'
+      description: 'Lorem ipsum'
+    routing:
+      base: /deutsch/
+      routes:
+        index:
+          key: index
+        debug:
+          key: debug
+          title: debug.title
+          url: debug/
+        helper:
+          key: helper
+          title: helper.title
+          url: helper/
+        lang-chooser:
+          key: lang-chooser
+          title: helper.lang-chooser
+          url: helper/lang-chooser/
+        url-builder:
+          key: url-builder
+          title: helper.url-builder
+          url: helper/url-builder/
+        navigation:
+          key: navigation
+          title: helper.navigation
+          url: helper/navigation/
+  en:
+    label: lang.en
+    val: en
+    i18n:
+      de: German
+      en: English
+      lang: Language
+      home: Homepage
+      navigation: Navigation
+      headline.title: Jekyll Boilerplate
+      info.title: Informations
+      helper.usage: usage
+      helper.config: config
+      helper.desc: description
+      helper.lang-chooser: 'Language chooser'
+      helper.url-builder: 'Link builder'
+      helper.navigation: 'Navigation'
+      helper.lang.desc.text: Erstellt eine Auswahl, mit der man die aktuelle Sprache festlegen kann
+      helper.url.desc.text: Nimmt einen <strong>key</strong> als Eingabe und erstellt daraus einen passende <strong>url_val</strong> (absolute Url), <strong>url_title</strong> (durch route festgelegter Titel)
+      helper.nav.desc.text: Erstellt eine Navigation, welche mit Einträgen, die vorher in der <strong>_config.yml</strong> unter <strong>navigation</strong> festgelegt wurden, automatisch gefüllt wird.
+      helper.example: example
+      sub.title: Sub-Page
+      helper.title: Helper
+      debug.title: Debug
+      debug.command: Command
+      debug.result: Result
+    meta:
+      title: Jekyll Boilerplate - Easy static and multilingual websites
+      keywords: 'english: jekyll, boilerplate, html5, static'
+      description: 'english: Lorem ipsum'
+    routing:
+      base: /english/
+      routes:
+        index:
+          key: index
+        debug:
+          key: debug
+          title: debug.title
+          url: debug/
+        helper:
+          key: helper
+          title: helper.title
+          url: helper/
+        lang-chooser:
+          key: lang-chooser
+          title: helper.lang-chooser
+          url: helper/lang-chooser/
+        url-builder:
+          key: url-builder
+          title: helper.url-builder
+          url: helper/url-builder/
+        navigation:
+          key: navigation
+          title: helper.navigation
+          url: helper/navigation/

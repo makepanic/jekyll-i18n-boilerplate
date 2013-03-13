@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        
+
+
+
+
+
+
+
+
+	
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Debug - Jekyll Boilerplate - Easy static and multilingual websites</title>
+<meta name="description" content="english: Lorem ipsum">
+<meta name="keywords" content="english: jekyll, boilerplate, html5, static">
+<meta name="robots" content="index, follow" />
+<meta name="language" content="en">
+<meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/foundation.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+        <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        
+        
+
+        <!-- Add your site or application content here -->
+        <nav class="top-bar">
+          <ul class="title-area">
+            <!-- Title Area -->
+            <li class="name">
+              <h1><a href="/">Jekyll Boilerplate</a></h1>
+            </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+          </ul>
+          <ul class="right">
+            <li class="divider hide-for-small">
+                
+
+
+
+
+<dl class="sub-nav">
+	<dt>Language:</dt>
+
+
+	
+	
+	
+	
+
+	
+		
+
+		
+
+		
+		<dd >
+			<a href="/deutsch/debug/">Deutsch</a>
+		</dd>
+	
+
+
+
+	
+	
+	
+	
+
+	
+		
+			
+		
+
+		
+
+		
+		<dd class="active">
+			<a href="/english/debug/">English</a>
+		</dd>
+	
+
+
+</dl>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="row"></div>
+        <div class="row">
+            <div class="columns large-2">
+                
+
+
+
+
+
+
+<ul class="side-nav">
+	<li><h3>Navigation</h3></li>
+	<li class="divider"></li>
+
+
+	
+
+		
+		
+
+		
+			
+		
+
+		
+
+		<li class="active"><a href="/english/debug/">Debug</a></li>
+
+	
+
+	
+
+		
+		
+
+		
+
+		
+
+		<li ><a href="/english/helper/">Helper</a></li>
+
+	
+
+
+</ul>
+            </div>
+            <div class="columns large-10">
+                <pre><code>&#123;% include debug.html %}</code></pre>
+
+
+
+
+
+
+<div class="row">
+	<div class="columns large-12">
+		<h2>Jekyll debug <small>_includes/debug.html</small></h2>
+	</div>
+
+
+	<div class="columns large-12">
+		<div class="panel">
+			<pre><code>&#123;% assign locale = site.locales[page.locale] %}
+&#123;% assign routing = locale.routing %}</code></pre>
+		</div>
+		<h3>page</h3>
+		<table class="columns">
+			<thead>
+				<tr>
+					<th width="200">Command</th>
+					<th>Result</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>&#123;&#123;page.layout}}</td>
+					<td>default</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;page.url}}</td>
+					<td>/english/debug/index.html</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;page.key}}</td>
+					<td>debug</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;page.locale}}</td>
+					<td>en</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>routing</h3>
+		<table class="columns">
+			<thead>
+				<tr>
+					<th width="200">Command</th>
+					<th>Result</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>&#123;&#123;routing}}</td>
+					<td>{"base"=>"/english/", "routes"=>{"index"=>{"key"=>"index"}, "debug"=>{"key"=>"debug", "title"=>"debug.title", "url"=>"debug/"}, "helper"=>{"key"=>"helper", "title"=>"helper.title", "url"=>"helper/"}, "lang-chooser"=>{"key"=>"lang-chooser", "title"=>"helper.lang-chooser", "url"=>"helper/lang-chooser/"}, "url-builder"=>{"key"=>"url-builder", "title"=>"helper.url-builder", "url"=>"helper/url-builder/"}, "navigation"=>{"key"=>"navigation", "title"=>"helper.navigation", "url"=>"helper/navigation/"}}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;routing.base}}</td>
+					<td>/english/</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;routing.routes}}</td>
+					<td>{"index"=>{"key"=>"index"}, "debug"=>{"key"=>"debug", "title"=>"debug.title", "url"=>"debug/"}, "helper"=>{"key"=>"helper", "title"=>"helper.title", "url"=>"helper/"}, "lang-chooser"=>{"key"=>"lang-chooser", "title"=>"helper.lang-chooser", "url"=>"helper/lang-chooser/"}, "url-builder"=>{"key"=>"url-builder", "title"=>"helper.url-builder", "url"=>"helper/url-builder/"}, "navigation"=>{"key"=>"navigation", "title"=>"helper.navigation", "url"=>"helper/navigation/"}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;routing.routes.info}}</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>locale</h3>
+		<table class="columns">
+			<thead>
+				<tr>
+					<th width="200">Command</th>
+					<th>Result</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>&#123;&#123;locale}}</td>
+					<td>{"label"=>"lang.en", "val"=>"en", "i18n"=>{"de"=>"German", "en"=>"English", "lang"=>"Language", "home"=>"Homepage", "navigation"=>"Navigation", "headline.title"=>"Jekyll Boilerplate", "info.title"=>"Informations", "helper.usage"=>"usage", "helper.config"=>"config", "helper.desc"=>"description", "helper.lang-chooser"=>"Language chooser", "helper.url-builder"=>"Link builder", "helper.navigation"=>"Navigation", "helper.lang.desc.text"=>"Erstellt eine Auswahl, mit der man die aktuelle Sprache festlegen kann", "helper.url.desc.text"=>"Nimmt einen <strong>key</strong> als Eingabe und erstellt daraus einen passende <strong>url_val</strong> (absolute Url), <strong>url_title</strong> (durch route festgelegter Titel)", "helper.nav.desc.text"=>"Erstellt eine Navigation, welche mit Einträgen, die vorher in der <strong>_config.yml</strong> unter <strong>navigation</strong> festgelegt wurden, automatisch gefüllt wird.", "helper.example"=>"example", "sub.title"=>"Sub-Page", "helper.title"=>"Helper", "debug.title"=>"Debug", "debug.command"=>"Command", "debug.result"=>"Result"}, "meta"=>{"title"=>"Jekyll Boilerplate - Easy static and multilingual websites", "keywords"=>"english: jekyll, boilerplate, html5, static", "description"=>"english: Lorem ipsum"}, "routing"=>{"base"=>"/english/", "routes"=>{"index"=>{"key"=>"index"}, "debug"=>{"key"=>"debug", "title"=>"debug.title", "url"=>"debug/"}, "helper"=>{"key"=>"helper", "title"=>"helper.title", "url"=>"helper/"}, "lang-chooser"=>{"key"=>"lang-chooser", "title"=>"helper.lang-chooser", "url"=>"helper/lang-chooser/"}, "url-builder"=>{"key"=>"url-builder", "title"=>"helper.url-builder", "url"=>"helper/url-builder/"}, "navigation"=>{"key"=>"navigation", "title"=>"helper.navigation", "url"=>"helper/navigation/"}}}}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;locale.meta}}</td>
+					<td>{"title"=>"Jekyll Boilerplate - Easy static and multilingual websites", "keywords"=>"english: jekyll, boilerplate, html5, static", "description"=>"english: Lorem ipsum"}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;locale.meta.title}}</td>
+					<td>Jekyll Boilerplate - Easy static and multilingual websites</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;locale.nav}}</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;locale.i18n}}</td>
+					<td>{"de"=>"German", "en"=>"English", "lang"=>"Language", "home"=>"Homepage", "navigation"=>"Navigation", "headline.title"=>"Jekyll Boilerplate", "info.title"=>"Informations", "helper.usage"=>"usage", "helper.config"=>"config", "helper.desc"=>"description", "helper.lang-chooser"=>"Language chooser", "helper.url-builder"=>"Link builder", "helper.navigation"=>"Navigation", "helper.lang.desc.text"=>"Erstellt eine Auswahl, mit der man die aktuelle Sprache festlegen kann", "helper.url.desc.text"=>"Nimmt einen <strong>key</strong> als Eingabe und erstellt daraus einen passende <strong>url_val</strong> (absolute Url), <strong>url_title</strong> (durch route festgelegter Titel)", "helper.nav.desc.text"=>"Erstellt eine Navigation, welche mit Einträgen, die vorher in der <strong>_config.yml</strong> unter <strong>navigation</strong> festgelegt wurden, automatisch gefüllt wird.", "helper.example"=>"example", "sub.title"=>"Sub-Page", "helper.title"=>"Helper", "debug.title"=>"Debug", "debug.command"=>"Command", "debug.result"=>"Result"}</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;locale.i18n.home}}</td>
+					<td>Homepage</td>
+				</tr>
+				<tr>
+					<td>&#123;&#123;locale.i18n['home']}}</td>
+					<td>Homepage</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+            </div>
+        </div>
+
+    </body>
+</html>

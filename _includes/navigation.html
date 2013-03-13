@@ -1,0 +1,33 @@
+{% comment %}
+	generates a navigation based on _config.yml
+{% endcomment %}
+
+
+{% assign locale = site.locales[page.locale] %}
+{% assign routing = locale.routing %}
+{% assign i18n = locale.i18n %}
+
+<ul class="side-nav">
+	<li><h3>{{i18n['navigation']}}</h3></li>
+	<li class="divider"></li>
+
+{% for item in site.navigation %}
+	{% if routing.routes[item] %}
+
+		{% assign current = nil %}
+		{% assign route = routing.routes[item] %}
+
+		{% if page.key == route.key or page.super == route.key %}
+			{% assign current = true %}
+		{% endif %}
+
+		{% capture url %}{{routing.base}}{{route.url}}{% endcapture %}
+
+		<li {% if current %}class="active"{% endif %}><a href="{{url}}">{{i18n[route.title]}}</a></li>
+
+	{% else %}
+		<li><div class="label alert">MISSING NAVIGATION ROUTE:</div> "{{item}}" not found</li>
+	{% endif %}
+{% endfor %}
+
+</ul>

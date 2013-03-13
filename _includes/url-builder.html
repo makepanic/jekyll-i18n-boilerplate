@@ -1,0 +1,7 @@
+{% assign locale = site.locales[page.locale] %}
+{% assign i18n = locale.i18n %}
+{% assign routing = locale.routing %}
+{% assign route = locale.routing.routes[target] %}
+
+{% capture url_val %}{{routing.base}}{{route.url}}{% endcapture %}
+{% assign url_title = i18n[route.title] %}

@@ -1,0 +1,33 @@
+{% comment %}
+	creates a language chooser based on _config.yml
+{% endcomment %}
+
+{% assign locale = site.locales[page.locale] %}
+{% assign i18n = locale.i18n %}
+
+<dl class="sub-nav">
+	<dt>{{i18n['lang']}}:</dt>
+{% for locales in site.locales %}
+
+	{% assign l = locales[1] %}
+	{% assign current = nil %}
+	{% assign url = nil %}
+	{% assign route = l.routing.routes[page.key] %}
+
+	{% if route %}
+		{% if page.locale == l.val %}
+			{% assign current = true %}
+		{% endif %}
+
+		{% assign url = route.url %}
+
+		{% capture fullurl %}{{l.routing.base}}{{url}}{% endcapture %}
+		<dd {% if current %}class="active"{% endif %}>
+			<a href="{{fullurl}}">{{l.i18n[l.val]}}</a>
+		</dd>
+	{% else %}
+		<dd><div class="label alert">MISSING ROUTE:</div> "{{l.val}} - {{page.current}}" not found</dd>
+	{% endif %}
+
+{% endfor %}
+</dl>

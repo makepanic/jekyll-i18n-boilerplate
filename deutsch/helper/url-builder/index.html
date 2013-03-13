@@ -1,0 +1,65 @@
+---
+layout: default
+locale: de
+key: url-builder
+super: helper
+---
+
+{% assign locale = site.locales[page.locale] %}
+{% assign i18n = locale.i18n %}
+
+<h2>Helper</h2>
+
+<ul class="side-nav">
+  {% assign target = 'lang-chooser' %}{% include url-builder.html %}
+  <li><a href="{{url_val}}">{{url_title}}</a></li>
+  {% assign target = 'navigation' %}{% include url-builder.html %}
+  <li><a href="{{url_val}}">{{url_title}}</a></li>
+  {% assign target = 'url-builder' %}{% include url-builder.html %}
+  <li><a href="{{url_val}}">{{url_title}}</a></li>
+</ul>
+
+<h3><a name="url-builder"></a>Url-Builder <small>_includes/url-builder.html</small></h3>
+
+<h4>{{i18n['helper.usage']}}:</h4>
+<div class="panel">
+	<pre><code>&#123;% assign target = '<span class="label">debug</span>' %}&#123;% include url-builder.html %}
+&lt;a href="&#123;{url_val}}">&#123;{url_title}}&lt;/a></code></pre>
+</div>
+<h4>{{i18n['helper.config']}}:</h4>
+
+<span class="secondary label">_config.yml</span>
+<div class="panel">
+<pre><code>navigation:
+  [..]
+locales:
+  foo:
+    val: foo
+    i18n:
+      [..]
+    meta:
+      [..]
+    routing:
+      base: /foobar/
+      routes:
+        debug:
+          key: <span class="label">debug</span>
+          title: debug.title
+          url: debug/
+</code></pre>
+</div>
+
+<h4>{{i18n['helper.desc']}}:</h4>
+<p>{{i18n['helper.url.desc.text']}}</p>
+<h4>{{i18n['helper.example']}}:</h4>
+<div class="panel">
+{% assign target = 'debug' %}{% include url-builder.html %}
+	<a href="{{url_val}}">{{url_title}}</a>
+</div>
+
+<hr/>
+<div class="row">
+	<div class="columns">
+		<a href="#top">&#8593; nach oben</a>
+	</div>
+</div>
